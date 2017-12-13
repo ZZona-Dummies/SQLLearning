@@ -5,3 +5,11 @@ C:\Users\Usuario\source\repos\SQLLearning\SQLLearning\obj\Debug\SQLLearning.cspr
 C:\Users\Usuario\source\repos\SQLLearning\SQLLearning\obj\Debug\SQLLearning.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\source\repos\SQLLearning\SQLLearning\obj\Debug\SQLLearning.exe
 C:\Users\Usuario\source\repos\SQLLearning\SQLLearning\obj\Debug\SQLLearning.pdb
+D:\VISUAL STUDIO\Visual Studio Projects\Zona Dummies\SQLLearning\SQLLearning\bin\Debug\SQLLearning.exe.config
+D:\VISUAL STUDIO\Visual Studio Projects\Zona Dummies\SQLLearning\SQLLearning\obj\Debug\SQLLearning.exe
+D:\VISUAL STUDIO\Visual Studio Projects\Zona Dummies\SQLLearning\SQLLearning\obj\Debug\SQLLearning.pdb
+D:\VISUAL STUDIO\Visual Studio Projects\Zona Dummies\SQLLearning\SQLLearning\bin\Debug\SQLLearning.exe
+D:\VISUAL STUDIO\Visual Studio Projects\Zona Dummies\SQLLearning\SQLLearning\bin\Debug\SQLLearning.pdb
+D:\VISUAL STUDIO\Visual Studio Projects\Zona Dummies\SQLLearning\SQLLearning\bin\Debug\MySql.Data.dll
+D:\VISUAL STUDIO\Visual Studio Projects\Zona Dummies\SQLLearning\SQLLearning\bin\Debug\MySql.Data.xml
+D:\VISUAL STUDIO\Visual Studio Projects\Zona Dummies\SQLLearning\SQLLearning\obj\Debug\SQLLearning.csprojResolveAssemblyReference.cache

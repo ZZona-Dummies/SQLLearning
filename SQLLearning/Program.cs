@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Data;
 
 namespace SQLLearning
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            SqlConnection myConnection = new SqlConnection("user id=usuario;" +
+            /*SqlConnection myConnection = new SqlConnection("user id=usuario;" +
                                        "password=usuario;server=localhost;" +
                                        "Trusted_Connection=yes;" +
                                        "database=jardineria; " +
@@ -31,7 +28,40 @@ namespace SQLLearning
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
+            }*/
+
+            string connectionString =
+         "Server=localhost;" +
+         "Database=jardineria;" +
+         "User ID=root;" +
+         "Password=;" +
+         "Pooling=false";
+            IDbConnection dbcon;
+            dbcon = new MySqlConnection(connectionString);
+            dbcon.Open();
+            IDbCommand dbcmd = dbcon.CreateCommand();
+            // requires a table to be created named employee
+            // with columns firstname and lastname
+            // such as,
+            //        CREATE TABLE employee (
+            //           firstname varchar(32),
+            //           lastname varchar(32));
+            string sql =
+                "SELECT * FROM gamasproducto";
+            dbcmd.CommandText = sql;
+            IDataReader reader = dbcmd.ExecuteReader();
+            while (reader.Read())
+            {
+                Console.WriteLine("Gama: {0}", reader["Gama"].ToString());
+                Console.WriteLine("Descripción: {0}", reader["DescripcionTexto"].ToString());
             }
+            // clean up
+            reader.Close();
+            reader = null;
+            dbcmd.Dispose();
+            dbcmd = null;
+            dbcon.Close();
+            dbcon = null;
 
             Console.Read();
         }
