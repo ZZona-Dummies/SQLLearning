@@ -8,60 +8,36 @@ namespace SQLLearning
     {
         private static void Main(string[] args)
         {
-            /*SqlConnection myConnection = new SqlConnection("user id=usuario;" +
-                                       "password=usuario;server=localhost;" +
-                                       "Trusted_Connection=yes;" +
-                                       "database=jardineria; " +
-                                       "connection timeout=3");
-
-            try
-            {
-                myConnection.Open();
-                SqlCommand myCommand = new SqlCommand("SELECT * FROM gamaproductos", myConnection);
-                var myReader = myCommand.ExecuteReader();
-                while (myReader.Read())
-                {
-                    Console.WriteLine(myReader["Gama"].ToString());
-                    Console.WriteLine(myReader["DescripcionTexto"].ToString());
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }*/
+            //Important: CREATE USER 'usuario'@'localhost' IDENTIFIED VIA mysql_native_password USING '***'; GRANT USAGE ON *.* TO 'usuario'@'localhost' REQUIRE NONE; GRANT SELECT ON `jardineria`.* TO 'usuario'@'localhost';
+            //           CREATE USER 'usuario'@'%' IDENTIFIED VIA mysql_native_password USING '***'; GRANT USAGE ON *.* TO 'usuario'@'%' REQUIRE NONE; GRANT SELECT ON `jardineria`.* TO 'usuario'@'localhost';
+            // GRANT SELECT ON `jardineria`.* TO 'usuario'@'%' WITH GRANT OPTION; -- <--- Si no tiene GRANT option no nos va a dejar
+            // GRANT SELECT ON `jardineria`.* TO 'usuario'@'localhost' WITH GRANT OPTION;
 
             string connectionString =
          "Server=localhost;" +
          "Database=jardineria;" +
-         "User ID=root;" +
-         "Password=;" +
+         "User ID=usuario;" +
+         "Password=usuario;" +
          "Pooling=false";
-            IDbConnection dbcon;
-            dbcon = new MySqlConnection(connectionString);
-            dbcon.Open();
-            IDbCommand dbcmd = dbcon.CreateCommand();
-            // requires a table to be created named employee
-            // with columns firstname and lastname
-            // such as,
-            //        CREATE TABLE employee (
-            //           firstname varchar(32),
-            //           lastname varchar(32));
-            string sql =
-                "SELECT * FROM gamasproducto";
-            dbcmd.CommandText = sql;
-            IDataReader reader = dbcmd.ExecuteReader();
-            while (reader.Read())
+
+            using (IDbConnection dbcon = new MySqlConnection(connectionString))
             {
-                Console.WriteLine("Gama: {0}", reader["Gama"].ToString());
-                Console.WriteLine("Descripción: {0}", reader["DescripcionTexto"].ToString());
+                dbcon.Open();
+                using (IDbCommand dbcmd = dbcon.CreateCommand())
+                {
+                    string sql =
+                        "SELECT * FROM gamasproducto";
+                    dbcmd.CommandText = sql;
+                    using (IDataReader reader = dbcmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Console.WriteLine("Gama: {0}", reader["Gama"].ToString());
+                            Console.WriteLine("Descripción: {0}", reader["DescripcionTexto"].ToString());
+                        }
+                    }
+                }
             }
-            // clean up
-            reader.Close();
-            reader = null;
-            dbcmd.Dispose();
-            dbcmd = null;
-            dbcon.Close();
-            dbcon = null;
 
             Console.Read();
         }
