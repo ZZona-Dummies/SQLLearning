@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLLearning", "SQLLearning\SQLLearning.csproj", "{2AA5F6DC-28F0-4F93-8C2F-906D12FE8798}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AA5F6DC-28F0-4F93-8C2F-906D12FE8798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AA5F6DC-28F0-4F93-8C2F-906D12FE8798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AA5F6DC-28F0-4F93-8C2F-906D12FE8798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AA5F6DC-28F0-4F93-8C2F-906D12FE8798}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6132B80-81E6-49C9-9BF7-4060C7258B50}
+	EndGlobalSection
+EndGlobal

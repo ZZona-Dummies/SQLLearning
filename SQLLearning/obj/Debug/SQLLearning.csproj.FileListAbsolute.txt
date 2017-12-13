@@ -1,0 +1,7 @@
+C:\Users\Usuario\source\repos\SQLLearning\SQLLearning\bin\Debug\SQLLearning.exe.config
+C:\Users\Usuario\source\repos\SQLLearning\SQLLearning\bin\Debug\SQLLearning.exe
+C:\Users\Usuario\source\repos\SQLLearning\SQLLearning\bin\Debug\SQLLearning.pdb
+C:\Users\Usuario\source\repos\SQLLearning\SQLLearning\obj\Debug\SQLLearning.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\source\repos\SQLLearning\SQLLearning\obj\Debug\SQLLearning.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\SQLLearning\SQLLearning\obj\Debug\SQLLearning.exe
+C:\Users\Usuario\source\repos\SQLLearning\SQLLearning\obj\Debug\SQLLearning.pdb
